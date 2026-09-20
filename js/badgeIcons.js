@@ -10,11 +10,11 @@ const RING_COLORS = {
   legendary: { from: "#ff8ad1", to: "#7b6bff" }, // 무지개 계열
 };
 
-// code -> { shape, rarity } — 10초 챌린지의 소재(시작 깃발, 속도, 스톱워치, 트로피, 왕관)에서 따온 모양들.
-// fish는 챌린지 제작 폼의 캐릭터 선택지와 의미가 겹쳐서 쓰지 않는다 (수집 캐릭터 ≠ 업적 뱃지).
+// code -> { shape, rarity } — 첫 클리어는 실제 게임 행위(물고기 잡기)를 그대로 보여주고,
+// 그 다음부터는 누적 성취를 상징하는 모양(체크포인트, 속도, 트로피, 왕관)으로 넘어간다.
 const BADGE_ICONS = {
-  first_clear: { shape: "flag", rarity: "common" },
-  clear_10: { shape: "bolt", rarity: "common" },
+  first_clear: { shape: "fish", rarity: "common" },
+  clear_10: { shape: "flag", rarity: "common" },
   clear_50: { shape: "stopwatch", rarity: "rare" },
   clear_200: { shape: "trophy", rarity: "epic" },
   clear_1000: { shape: "crown", rarity: "legendary" },
@@ -36,8 +36,9 @@ function shapeMarkup(shape) {
     case "flag":
       return `<line x1="24" y1="12" x2="24" y2="48" stroke="white" stroke-width="5" stroke-linecap="round"/>
               <polygon points="24,13 48,20 24,30" fill="white"/>`;
-    case "bolt":
-      return `<polygon points="34,10 18,34 29,34 26,54 46,26 33,26" fill="white"/>`;
+    case "fish":
+      return `<ellipse cx="28" cy="32" rx="15" ry="10" fill="white"/>
+              <polygon points="42,32 54,22 54,42" fill="white"/>`;
     case "stopwatch":
       return `<rect x="27" y="8" width="10" height="5" rx="1.5" fill="white"/>
               <circle cx="32" cy="34" r="16" fill="none" stroke="white" stroke-width="4"/>
