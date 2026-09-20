@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <title>10초 챌린지</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="app">
+
+    <section id="page-home" class="page screen">
+      <h1 id="home-title"></h1>
+      <p id="home-subtitle" class="muted"></p>
+      <button id="home-create-btn" class="primary-btn"></button>
+      <button id="home-demo-btn" class="secondary-btn"></button>
+      <div class="home-links">
+        <button id="home-profile-btn" class="link-btn"></button>
+        <button id="home-badges-btn" class="link-btn"></button>
+      </div>
+    </section>
+
+    <section id="page-create" class="page hidden">
+      <div class="form-wrap">
+        <h2 id="create-heading"></h2>
+        <form id="create-form">
+          <label class="field">
+            <span id="label-title"></span>
+            <input type="text" name="title" maxlength="60" required value="10초 동안 물고기 20마리 먹기" />
+          </label>
+
+          <label class="field">
+            <span id="label-duration"></span>
+            <input type="number" name="durationSec" min="5" max="30" step="1" required value="10" />
+          </label>
+
+          <label class="field">
+            <span id="label-goal"></span>
+            <input type="number" name="goalValue" min="1" max="999" step="1" required value="20" />
+          </label>
+
+          <label class="field">
+            <span id="label-speed"></span>
+            <input type="range" name="speed" min="0.5" max="2" step="0.1" value="1" />
+          </label>
+
+          <label class="field">
+            <span id="label-spawn-rate"></span>
+            <input type="range" name="spawnRate" min="0.5" max="2" step="0.1" value="1" />
+          </label>
+
+          <label class="field">
+            <span id="label-target-size"></span>
+            <input type="range" name="targetSize" min="0.5" max="2" step="0.1" value="1" />
+          </label>
+
+          <label class="field">
+            <span id="label-background"></span>
+            <select name="background">
+              <option value="ocean" selected>Ocean</option>
+              <option value="space">Space</option>
+              <option value="forest">Forest</option>
+              <option value="night">Night</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span id="label-character"></span>
+            <select name="character">
+              <option value="fish" selected>🐟 Fish</option>
+              <option value="star">⭐ Star</option>
+              <option value="leaf">🍃 Leaf</option>
+              <option value="coin">🪙 Coin</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span id="label-max-on-screen"></span>
+            <input type="number" name="maxOnScreen" min="1" max="8" step="1" required value="3" />
+          </label>
+
+          <p id="create-errors" class="error-text"></p>
+
+          <button type="submit" id="create-submit-btn" class="primary-btn"></button>
+          <button type="button" id="create-cancel-btn" class="secondary-btn"></button>
+        </form>
+      </div>
+    </section>
+
+    <section id="page-play" class="page hidden">
+      <div id="play-toolbar">
+        <button id="home-btn" aria-label="home">🏠</button>
+        <button id="share-btn" aria-label="share"></button>
+      </div>
+
+      <section id="screen-ready" class="screen">
+        <h1 id="title"></h1>
+        <p id="best-line" class="muted"></p>
+        <button id="start-btn" class="primary-btn"></button>
+        <p id="ready-hint" class="muted"></p>
+      </section>
+
+      <section id="screen-countdown" class="screen hidden">
+        <div id="countdown-number"></div>
+      </section>
+
+      <section id="screen-playing" class="screen hidden">
+        <div id="hud">
+          <span id="score-line"></span>
+          <span id="timer-line"></span>
+        </div>
+        <div id="game-area"></div>
+      </section>
+
+      <section id="screen-result" class="screen hidden">
+        <h2 id="result-headline"></h2>
+        <p id="result-score"></p>
+        <p id="result-best" class="muted"></p>
+        <button id="retry-btn" class="primary-btn"></button>
+      </section>
+    </section>
+
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

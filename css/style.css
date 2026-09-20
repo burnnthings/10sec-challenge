@@ -1,0 +1,243 @@
+:root {
+  --bg: #0b3d5c;
+  --fg: #f4faff;
+  --accent: #ffcb47;
+  --muted: #9fc4dd;
+  --danger: #ff8080;
+  --field-bg: rgba(255, 255, 255, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  overscroll-behavior: none;
+  touch-action: none;
+  user-select: none;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+#app {
+  width: 100%;
+  max-width: 480px;
+  height: 100dvh;
+  position: relative;
+  overflow: hidden;
+}
+
+.page {
+  position: absolute;
+  inset: 0;
+}
+
+.screen {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 24px;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.muted {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.primary-btn, .secondary-btn {
+  font-size: 18px;
+  font-weight: 700;
+  padding: 14px 32px;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.primary-btn {
+  background: var(--accent);
+  color: #1a1a1a;
+}
+
+.secondary-btn {
+  background: transparent;
+  color: var(--fg);
+  border: 1px solid var(--muted);
+}
+
+.primary-btn:active, .secondary-btn:active {
+  transform: scale(0.96);
+}
+
+#countdown-number {
+  font-size: 96px;
+  font-weight: 800;
+}
+
+#screen-playing {
+  padding: 0;
+  justify-content: flex-start;
+}
+
+#hud {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 56px 20px 16px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+#game-area {
+  position: relative;
+  width: 100%;
+  flex: 1;
+  overflow: hidden;
+}
+
+#game-area.theme-ocean {
+  background: linear-gradient(180deg, #0b3d5c, #062338);
+}
+
+#game-area.theme-space {
+  background: linear-gradient(180deg, #1b1035, #050014);
+}
+
+#game-area.theme-forest {
+  background: linear-gradient(180deg, #1f4d2b, #0d2413);
+}
+
+#game-area.theme-night {
+  background: linear-gradient(180deg, #10131c, #02030a);
+}
+
+.target {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  touch-action: none;
+}
+
+.hazard {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: rgba(255, 90, 90, 0.2);
+  border: 2px solid rgba(255, 90, 90, 0.6);
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+#result-headline {
+  font-size: 28px;
+}
+
+#result-headline.cleared {
+  color: var(--accent);
+}
+
+/* 페이지 이동/공유 툴바 (page-play 상단에 고정) */
+#play-toolbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 16px;
+  pointer-events: none;
+}
+
+#play-toolbar button {
+  pointer-events: auto;
+  background: rgba(0, 0, 0, 0.3);
+  border: none;
+  color: var(--fg);
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* 챌린지 만들기 폼 */
+#page-create {
+  overflow-y: auto;
+  touch-action: pan-y;
+  padding: 24px;
+}
+
+.form-wrap {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.form-wrap h2 {
+  text-align: center;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.field input, .field select {
+  background: var(--field-bg);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  padding: 10px 12px;
+  color: var(--fg);
+  font-size: 16px;
+}
+
+.field input[type="range"] {
+  padding: 0;
+}
+
+.error-text {
+  color: var(--danger);
+  font-size: 14px;
+  min-height: 20px;
+}
+
+#create-form {
+  display: flex;
+  flex-direction: column;
+}
+
+#create-form .primary-btn, #create-form .secondary-btn {
+  margin-top: 8px;
+}
