@@ -120,6 +120,54 @@
       </section>
     </section>
 
+    <section id="page-profile" class="page scrollable hidden">
+      <div class="sub-toolbar">
+        <button id="profile-home-btn" aria-label="home">🏠</button>
+        <button id="profile-share-btn" aria-label="share"></button>
+      </div>
+      <div class="profile-content">
+        <div id="profile-avatar" class="profile-avatar">🐟</div>
+        <div id="profile-nickname-row">
+          <span id="profile-nickname"></span>
+          <button id="profile-edit-nickname-btn" class="link-btn hidden"></button>
+        </div>
+        <p id="profile-level" class="muted"></p>
+        <div class="xp-bar"><div id="profile-xp-fill" class="xp-bar-fill" style="width:0%"></div></div>
+        <p id="profile-xp-label" class="muted small"></p>
+
+        <div class="profile-stats">
+          <div>
+            <span id="profile-coins" class="stat-value"></span>
+            <span id="profile-coins-label" class="stat-label"></span>
+          </div>
+          <div>
+            <span id="profile-clears" class="stat-value"></span>
+            <span id="profile-clears-label" class="stat-label"></span>
+          </div>
+          <div>
+            <span id="profile-rank" class="stat-value"></span>
+            <span id="profile-rank-label" class="stat-label"></span>
+          </div>
+        </div>
+
+        <h2 id="profile-badges-heading"></h2>
+        <div id="profile-badges-grid" class="badge-grid"></div>
+        <p id="profile-not-found" class="muted hidden"></p>
+      </div>
+    </section>
+
+    <section id="page-badges" class="page scrollable hidden">
+      <div class="sub-toolbar">
+        <button id="badges-home-btn" aria-label="home">🏠</button>
+      </div>
+      <div class="badges-content">
+        <h1 id="badges-heading"></h1>
+        <p id="badges-subtitle" class="muted"></p>
+        <div id="badges-grid" class="badge-grid"></div>
+        <button id="badges-share-btn" class="secondary-btn"></button>
+      </div>
+    </section>
+
   </div>
 
   <script type="module" src="js/main.js"></script>

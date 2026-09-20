@@ -30,6 +30,23 @@ const DICT = {
 
     share_btn: "링크 복사",
     share_copied: "복사됨!",
+
+    home_profile_btn: "내 프로필",
+    home_badges_btn: "뱃지 도감",
+
+    profile_level_label: "레벨",
+    profile_coins_label: "코인",
+    profile_clears_label: "클리어",
+    profile_rank_label: "세계 랭킹",
+    profile_badges_heading: "획득한 뱃지",
+    profile_edit_nickname_btn: "닉네임 수정",
+    profile_nickname_prompt: "새 닉네임 (2~16자)",
+    profile_not_found: "플레이어를 찾을 수 없습니다",
+
+    badges_heading: "뱃지 도감",
+    badges_subtitle: "챌린지를 클리어해서 뱃지를 모아보세요",
+    badges_share_btn: "내 프로필 공유하기",
+    badge_locked: "잠김",
   },
   en: {
     start: "Start",
@@ -62,6 +79,23 @@ const DICT = {
 
     share_btn: "Copy link",
     share_copied: "Copied!",
+
+    home_profile_btn: "My profile",
+    home_badges_btn: "Badge collection",
+
+    profile_level_label: "Level",
+    profile_coins_label: "Coins",
+    profile_clears_label: "Clears",
+    profile_rank_label: "World rank",
+    profile_badges_heading: "Earned badges",
+    profile_edit_nickname_btn: "Edit nickname",
+    profile_nickname_prompt: "New nickname (2-16 chars)",
+    profile_not_found: "Player not found",
+
+    badges_heading: "Badge collection",
+    badges_subtitle: "Clear challenges to collect badges",
+    badges_share_btn: "Share my profile",
+    badge_locked: "Locked",
   },
 };
 
